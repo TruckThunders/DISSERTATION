@@ -1,0 +1,21 @@
+3/1/2017
+
+- Added bibliography for thesis
+- Made plot, emailed Chris
+- Labelled section numbers in paper TeX document
+- Broke up Introduction into smaller paragraphs
+- Moved metallicity section
+- Moved ionization section
+- Moved Behroozi section
+- Made big paragraphs smaller
+- Made abstract less than 250 words
+
+4/6/2017
+
+- Wrote vita.tex
+- Updated title.tex
+- Wrote abstract.tex
+- Wrote abbrev.tex
+- Started appendixA.tex, which might include the matched filtering section.
+- Made appendixA funny
+- 
