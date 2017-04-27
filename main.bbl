@@ -1,22 +1,7 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{1}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[{{Borucki} {et~al.}(2011){Borucki}, {Koch}, {Basri}, {Batalha},
-  {Brown}, {Bryson}, {Caldwell}, {Christensen-Dalsgaard}, {Cochran}, {DeVore},
-  {Dunham}, {Gautier}, {Geary}, {Gilliland}, {Gould}, {Howell}, {Jenkins},
-  {Latham}, {Lissauer}, {Marcy}, {Rowe}, {Sasselov}, {Boss}, {Charbonneau},
-  {Ciardi}, {Doyle}, {Dupree}, {Ford}, {Fortney}, {Holman}, {Seager},
-  {Steffen}, {Tarter}, {Welsh}, {Allen}, {Buchhave}, {Christiansen}, {Clarke},
-  {Das}, {D{\'e}sert}, {Endl}, {Fabrycky}, {Fressin}, {Haas}, {Horch},
-  {Howard}, {Isaacson}, {Kjeldsen}, {Kolodziejczak}, {Kulesa}, {Li}, {Lucas},
-  {Machalek}, {McCarthy}, {MacQueen}, {Meibom}, {Miquel}, {Prsa}, {Quinn},
-  {Quintana}, {Ragozzine}, {Sherry}, {Shporer}, {Tenenbaum}, {Torres},
-  {Twicken}, {Van Cleve}, {Walkowicz}, {Witteborn}, \& {Still}}]{Borucki2011}
-{Borucki}, W.~J., {et~al.} 2011, \apj, 736, 19
-
-\bibitem[{{Coughlin} {et~al.}(2008){Coughlin}, {Stringfellow}, {Becker},
-  {L{\'o}pez-Morales}, {Mezzalira}, \& {Krajci}}]{Coughlin2008}
-{Coughlin}, J.~L., {Stringfellow}, G.~S., {Becker}, A.~C., {L{\'o}pez-Morales},
-  M., {Mezzalira}, F., \& {Krajci}, T. 2008, \apjl, 689, L149
+\bibitem[{{Haardt} \& {Madau}(2012)}]{Haardt2012}
+{Haardt}, F., \& {Madau}, P. 2012, \apj, 746, 125
 
 \end{thebibliography}

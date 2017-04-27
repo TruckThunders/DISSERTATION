@@ -18,4 +18,10 @@
 - Wrote abbrev.tex
 - Started appendixA.tex, which might include the matched filtering section.
 - Made appendixA funny
-- 
+- Backed up dissertation to github: git@github.com:TruckThunders/DISSERTATION.git
+
+4/20/2017
+
+- Added ODR fitting methodology to MgII paper
+- Moved relevant historical notations to discussion section of CIV paper
+- Updated all references
