@@ -6,27 +6,115 @@ Now we can finally get down to the science!
 \subsection{Number of Absorbers Per Path Length}
 \label{ch6:dndx}
 
-Dat path doe.
+%Dat path doe.
 
-\subsection{Parameterizing $dN\,/dX$ to Derive Physical Properties}
-\label{ch6:parameterize}
+Previous studies of the statistical properties of {\CIV} absorbers have thoroughly characterized {\CIV} absorbers with equivalent widths above $W_r^{\lambda1548} = 0.3$~{\AA}. This corresponds to the detection limit of the Sloan Digital Sky Survey (SDSS), which catalogs hundreds of thousands of quasar spectra. Unfortunately, the distribution of the low equivalent width regime of {\CIV} absorbers has not been characterized.
 
-Describe how we interpret evolution in terms of $n$, $\sigma$, and $\epsilon$.
+We follow the prescriptions of Paper 1, in which we details the calculations of $dN\,/dz$ and $dN\,/dX$, the redshift path density and absorption path density, respectively. These metrics describe the expected number of detected absorbers through a given redshift or absorption path length.
+
+In Figures~\ref{fig:dndz_cuts} and~\ref{fig:dndx_cuts}, we plot $dN\,/dz$ and $dN\,/dX$ as a function of redshift for varying equivalent width cuts. Dotted lines are fit according to the analytical form which allows for redshift evolution in $dN\,/dX$, defined as,
+
+\begin{equation}
+\frac{dN}{d(z,X)} = n\sigma (1 + z)^{\epsilon},
+\label{eqn:dndxfit}
+\end{equation}
+
+where $n$ is the number density of {\CIV} absorbers, $\sigma$ is the absorbing cross-section, and $\epsilon$ is the power dependence of $dN\,/dX$ on redshift.
+
+\begin{figure}[bth]
+\epsscale{1.25}
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_z_CIV_dndz.pdf}
+\caption{$\frac{dN}{dZ}$ as a function of redshift for varying $W_r^{\lambda1548}$ cuts. Colors represent different equivalent width cuts. The black dotted lines are fits to the distribution of the functional form $f(z) = n\sigma (1 + z)^{\epsilon}$, with the best fit $\epsilon$ value labelled.}
+\label{fig:dndz_cuts}
+\end{figure}
+
+\begin{figure}[bth]
+\epsscale{1.25}
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_z_CIV_dndx.pdf}
+\caption{$\frac{dN}{dX}$ as a function of redshift for varying $W_r^{\lambda1548}$ cuts. Colors represent different equivalent width cuts. The black dotted lines are fits to the distribution of the functional form $f(z) = n\sigma (1 + z)^{\epsilon}$, with the best fit $\epsilon$ value labelled. We see increasing values of $\epsilon$ with increasing equivalent width, driven by an enhancement of stronger {\CIV} absorbers around redshift 2 compared to lower redshifts.}
+\label{fig:dndx_cuts}
+\end{figure}
+
+% EDIT - EQUATIONS AND PAPER SPECIFIC LANGUAGE
+In Figures~\ref{fig:nsigma} and ~\ref{fig:epsilon}, we show the evolution of the Hubble opacity and the evolution parameter as a function of different equivalent width cuts. As we apply larger equivalent width cuts, $n\sigma$ stays relatively flat before rising to a peak at $W_r^{\lambda1548} = 0.7$~{\AA}. This value then drops precipitously, representing a decreasing incidence of very strong {\CIV} absorbers, whether by decreasing number density, absorbing cross-section, or both. In addition, $\epsilon$ becomes more negative with increasing equivalent width cuts up until around $W_r^{\lambda1548} = 0.7$~{\AA}, at which point it rises again for the strongest {\CIV} absorbers. This transition at $W_r^{\lambda1548} = 0.7$~{\AA} occurs not because the overall slope of the distribution necessarily changes, but instead because the distribution takes on a different shape not well described by Equation~\ref{eqn:dndxfit}, where $dN\,/dz$ and $dN\,/dX$ peak around $z = 2$, but decrease towards higher and lower redshifts.
+
+\begin{figure}[bth]
+\epsscale{1.27}
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_nsigma_CIV_dndx.pdf}
+\caption{Absorber space density times cross section, as derived from the funtional fit $dN\,/dX = n\sigma (1 + z)^{\epsilon}$ as a function of cumulative equivalent width cut, where $W_r^{\lambda1548} > x$~{\AA}. As ${\CIV}$ equivalent width increases, either the space density of absorbing cloud structures decreses, the absorbing cross-section decreases, or both parameters decrease.}
+\label{fig:nsigma}
+\end{figure}
+
+\begin{figure}[bth]
+\epsscale{1.27}
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_epsilon_CIV_dndx.pdf}
+\caption{Redshift power dependence of the functional fit $dN\,/dX = n\sigma (1 + z)^{\epsilon}$ as a function of cumulative equivalent width cut, where $W_r^{\lambda1548} > x$~{\AA}. Weak ${\CIV}$ absorbers are more abundant at low redshift, leading to a negative coefficient $\epsilon$. Moderate equivalent width ${\CIV}$ absorbers do not evolve, showing $\epsilon \simeq 0$. Strong ${\CIV}$ absorbers evolve away at low redshift, showing a large positive $\epsilon$ increasing towards $z = 2$.}
+\label{fig:epsilon}
+\end{figure}
 
 \subsection{Equivalent Width Distribution}
 \label{ch6:ewdistro}
 
-Schechter that shit.
+%Schechter that shit.
+
+We calculate the equivalent width frequency distribution by first calculating $dN\,/dz$ and $dN\,/dX$ for each absorber equivalent width, then summing the distribution in equivalent width bins, and then dividing by the bin width. We examine four redshift bins, requiring that the number of absorbers in each redshift range remains constant.
+
+In Figure~\ref{fig:ewdistrodndx}, we plot the equivalent width frequency distribution. We fit this distribution with a Shechter function to parameterize the distribution and to compare the relative differences between varying redshift cuts. We find the low equivalent width slope decreases towards shallower values as redshift increases, implying a decrease in weak {\CIV} absorbers and a relative increase in strong {\CIV} absorbers from low redshift to redshifts near $z = 2$.
+
+\begin{figure*}[bth]
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_ew_CIV_dndz.pdf}
+\caption{The equivalent width distribution of ${\CIV}$ absorbers, defined as the comoving line density ($\frac{dN}{dX}$) in each equivalent width bin divided by the bin width. We fit this distribution with a Schechter function, capturing the self-similar power law behavior of the distribution before the exponential cutoff limiting the size of ${\CIV}$ absorbers.}
+\label{fig:ewdistrodndz}
+\end{figure*}
+
+\begin{figure*}[bth]
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_ew_CIV_dndx.pdf}
+\caption{The equivalent width distribution of {\CIV} absorbers, defined as the comoving line density ($\frac{dN}{dX}$) in each equivalent width bin divided by the bin width. We fit this distribution with a Schechter function, capturing the self-similar power law behavior of the distribution before the exponential cutoff limiting the size of {\CIV} absorbers.}
+\label{fig:ewdistrodndx}
+\end{figure*}
 
 \subsection{Column Density Distribution}
 \label{ch6:columndistro}
 
-Schechter it HARDER.
+%Schechter it HARDER.
+
+To calculate the column density distribution, we calculate $dN\,/dX$ for each absorber equivalent width, sum the distribution in column density bins, and then divide by the bin width. The result is a characteristic number density of {\CIV} absorbers per absorption path length as a function of their column densities. It should be noted that at high column densities near $\log (N(CIV)) = 15$, the measured column densities are lower limits as the AOD method to measure column densities cannot constrain the true column when the line saturates.
+
+In Figure~\ref{fig:logndistro}, we plot the column density frequency distribution. Again, we fit this distribution with a Schechter function. We find again that the low column density end of the distribution becomes shallower as one goes from low redshift to $z = 2$. Due to saturation effects, the final high column density bin is likely best regarded as a lower limit.
+
+\begin{figure*}[bth]
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_logN_CIV_dndz.pdf}
+\caption{The column density distribution of ${\CIV}$ absorbers, defined as the comoving line density in each column density bin divided by the bin width. We fit this distribution with a Schechter function.}
+\label{fig:logndistrodndz}
+\end{figure*}
+
+\begin{figure*}[bth]
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/hist_logN_CIV_dndx.pdf}
+\caption{The column density distribution of {\CIV} absorbers, defined as the comoving line density in each column density bin divided by the bin width. We fit this distribution with a Schechter function.}
+\label{fig:logndistro}
+\end{figure*}
 
 \subsection{$\Omega_{\CIV}$}
 \label{ch6:omega}
 
-Such cosmology.
+%Such cosmology.
+
+We now aim to calculate the matter density of {\CIV} absorbers across cosmic time using the following equation,
+
+\begin{equation}
+\Omega_{CIV} = \frac{H_0\  m_{Mg}}{c\ \rho_{c,0}} \int_{N_{min}}^{N_{max}}\, f (N_{CIV})\, N_{CIV}\, dN_{CIV} ,
+\label{eqn:omega}
+\end{equation}
+
+where $H_0$ is the Hubble constant today, $m_{Mg} = 4.035 \times 10^{-23}~\mathrm{g}$, $c$ is the speed of light, $\rho_{c,0}$ is the critical density at present, $f(N_{CIV})$ is the column density distribution of {CIV} absorbers, and $N_{CIV}$ is the column density. We numerically integrate the Schecter Function fit to $f(N_{CIV})$, multiplied by $N_{CIV}$. The results are shown below in Figure~\ref{fig:omegamgii}.
+
+\begin{figure*}[bth]
+\plotone{/Users/Nigel/PROJECTS/VULTURE/PLOTS/Omega_CIV.pdf}
+\caption{$\Omega_{\CIV}$ as a function of redshift. The cosmic mass density of {\CIV} stays roughly flat near a value of $1 \times 10^{-9}$, with a potential increase from $z = 0.1$ to $z = 2.5$.}
+\label{fig:omegamgii}
+\end{figure*}
+
+Errors are derived by bootstrap Monte-Carlo, performing the same sample analysis outlined in Sections~\ref{sec:logndistro} and~\ref{omegaciv} on a random sample, selected with replacement, of {\CIV} absorbers.  We take the standard deviation about the mean of this ensemble of random samples as the error in $\Omega_{CIV}$.
 
 \subsection{Strong vs. Weak Absorbers}
 \label{ch6:strongweak}

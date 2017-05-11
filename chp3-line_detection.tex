@@ -6,21 +6,31 @@
 
 Large spectral data sets are becomming the norm in both galactic and extragalactic astronomy. In the Milky Way, the spectra of hundreds of thousands of stars may be analyzed by routines which fit templates to find the best agreement. Unfortunately, when dealing with redshifted systems composed of a multitude of components (stars, gas, AGN), the number of free parameters increases significantly and templates/matching techniques become unfeasable. Therefore, we require a more general, but no less robust line finding algorithm to handle large spectral libraries.
 
-\section{Automated Line Detection}
-\label{ch3:detection}
-
-We employ a cross-correlation method similar to that of Zhu \& Menard, 2013.
-
 \subsection{Defining the Search Window}
 \label{ch3:window}
 
 In any large survey, a well-defined search window is important. In the case of analyzing quasar spectra, we are constrained by several factors: the wavelength coverage of the spectrum, the redshift of the observed quasar, and the confidence with which we can identify individual doublets in regions of low signal-to-noise and regions with atmospheric absorption features (telluric lines).
 
-We limit our wavelength search window for CIV and MgII absorbers to regions redward of the Lyman-alpha emission feature, or the blue limit of the spectrum if the Ly$\alpha$ is not observed, and 3000 km/s blueward of either the corresponding CIV/MgII emission feature, or the red limit of the spectrum if these features are also not observed.
+We first limit the search range to regions of the spectrum redward of the {\Lya} emission, as {\Lya} forest contamination would render automatic detection of weaker metal lines nearly impossible. We also do not search $5000$~{\kms} blueward of the quasar emission redshift in order to avoid absorbers associated with the quasar itself. Finally, we exclude regions of strong telluric absorption bands, specifically from $6277 - 6318$~{\AA}, $6868 - 6932$~{\AA}, $7594 - 7700$~{\AA}, and $9300 - 9630$~{\AA}, because we found that the molecular line separations and ratios can lead to numerous false positives when searching for ${\MgII}$ doublets.
 
-We also do not search in regions of strong telluric absorption, cutting out the following wavelength chunks: [6277 - 6318\AA], [6868 - 6932\AA], [7594 - 7700\AA], and [9300 - 9630\AA].
+\subsection{Matched Filtering Algorithm}
+\label{ch3:detection}
 
-\subsubsection{The Step-By-Step Recipe for Finding Redshifted Lines}
+We employ a matched filter search method similar to that of Zhu \& Menard, 2013, seeking line candidates above a certain signal-to-noise ratio threshold. This process involves correlating a template filter (in this case, a tophat function) with a signal to detect the presence of features matching the template. In other words, we convolve the quasar spectrum with a conjugated, reversed filter representing an absorption trough. This method can maximize the signal-to-noise ratio in the presense of stochastic noise.
+
+The filter we choose is a top hat function centered at the wavelength of the desired redshifted absorption line. Its width is selected to match the resolution of the spectrum, which is a function of the slit width used during the exposure. A large variety of slit-widths were used to achieve different resolutions for varying science drivers, but, characteristically for a 1.0 arcsec slit, $R \sim 40,000$ for VLT/UVES and $R \sim 45,000$ for Keck/HIRES. We convolve the filter with the normalized spectrum to generate a normalized power spectrum in redshift space, with absorption features having positive power.
+
+The error spectrum in both instruments is complex, irregular, and has frequent single-pixel spikes which makes uniform normalization impossible. Therefore, we cannot convolve the filter with the error spectrum to derive normalized noise estimates, as is often done in matched filter analysis. Instead, we examine the noise in the derived power spectrum.
+
+To derive the noise, we first divide the power spectrum into smaller chunks which correspond to roughly 3000 pixels in the observed spectrum. We then sigma-clip these chunks to remove absorption features, leaving only the continuum power spectrum. Next, we calculate the standard deviation of this continuum. Finally, we use the standard deviation as the noise to calculate the $S\,/N$ of the absorption features in the power spectrum as the ratio of the normalized power ($S$) to the normalized noise ($N$).
+
+A flagged absorption feature has $S\,/N > 5$. A confirmed doublet detetection for {\MgIIdblt} requires detection of $S\,/N^{\lambda2796} > 5$ and $S\,/N^{\lambda2803} > 3$. Similarly, a detection for {\CIVdblt}, we require $S\,/N^{\lambda1548} > 5$ and $S\,/N^{\lambda1551} > 3$. In addition, our automated routines remove detections with non-physical doublet ratios in unsaturated regions; specifically, we exclude cases where $W_r^{\lambda2803} > W_r^{\lambda2796}$, or $W_r^{\lambda2803} < \left(0.3 \times W_r^{\lambda2796}\right)$. The same convention is also applied to the {\CIV} doublets. The latter constraint is conservative for unsaturated absorbers, as the secondary transition in the doublet is rarely observed less than $0.5 \times$ the primary. We relax this constraint in saturated features. This system could potentially exclude detections where either the primary or secondary line in the doublet is blended with another transition but does not saturate; however, confirmation of these cases requires extra verification from separate ionic transitions, such as ${\FeII}$, which are weaker and not always covered in the spectrum.
+
+All absorption features are visually verified upon completion of the detection algorithm. Multiple feature detections within $\pm 500$~{\kms} of each other are grouped together to generate absorption systems, designated as a single absorber, to be analyzed. Once absorption systems are identified, we calculate the optical depth-weighted median absorption redshift to define the center of the entire absorption system. The formal derivation of this redshift is described in the appendix of~\cite{Churchill2001}.
+
+We also derive an equivalent width detection limit across the spectrum. To do so, we insert modelled Gaussian absorption features across the spectrum and assume a full-width at half maximum (FWHM) defined by the resolution of the instrument to represent unresolved lines. We then solve for the height of the Gaussian, defined as the value at the curve's peak, required to detect the unresolved line with our matched filtering technique at a $S\,/N = 5$. Finally, we integrate to find the equivalent width, and take that value as the minimum detectable equivalent width at a given wavelength. The detection algorithm is therefore self-monitoring. This full equivalent width detection limit spectrum also allows us to accurately characterize the completeness of our sample, along with the full redshift path length searched.
+
+\subsection{The Step-By-Step Recipe for Finding Redshifted Lines}
 \label{ch3:steps}
 
 \begin{enumerate}
@@ -30,13 +40,20 @@ We also do not search in regions of strong telluric absorption, cutting out the 
 \item Define filter sized based upon FWHM of an unresolved line at the given spectrograph resolution
 \item Do the cross-correlation
 \begin{itemize}
-\item At each redshift, place the filter for each transition (MgII 2796,2803 and CIV 1548,1551)
-\item Compute the area between the filter and the observed spectrum - This is the POWER at that redshift. Higher power = stronger absorption.
-\item Step forward, doing the same thing. Build up a power spectrum which has the observed power for each transition at a given redshift.
+\item At each redshift, place the filter for each transition ({\MgIIdblt} and {\CIVdblt}).
+\item Compute the area between the filter and the observed spectrum - This is the power at that redshift. Higher power corresponds to stronger absorption.
+\item Step forward, repeat the calculation. Build up a power spectrum which has the observed power for each transition at a given redshift.
 \end{itemize}
-\item Normalize the power spectrum
+\item Normalize the power spectrum.
 \begin{itemize}
 \item The raw power spectrum's amplitude is tied directly to the wavelength range (or redshift range depending on how you want to think about it at this point), as we are taking the area beneath a variable-length object (in this case, the spectrum or filter). We wish to analyze a power spectrum which ranges between 0 and 1 for any spectrum analyzed. This means we want to subtract the baseline value (the result of the correlation if there is zero absorption detected) from the raw power spectrum, and then divide by the difference between the minimum value (no absorption) and the maximum value (a fully saturated absorption line whose width is equal to or greater than the width of the filter used).
-\item
+\item This difference ends up being the area of the filter, which, because the spectrum is normalized, is the width of the filter.
+\end{itemize}
+\item Calculate the normalized error.
+\begin{itemize}
+\item Split the normalized power spectrum into chunks (HOW BIG ARE THEY).
+\item In each of these chunks, sigma clip the power spectrum to eliminate absorption features.
+\item Take the standard deviation of the remaining power spectrum. This represents the noise in the continuum after filtering.
+
 \end{itemize}
 \end{enumerate}

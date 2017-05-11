@@ -1,61 +1,68 @@
 \contentsline {section}{LIST OF TABLES}{xii}
 \contentsline {section}{LIST OF FIGURES}{xiii}
-\contentsline {section}{LIST OF ABBREVIATIONS}{xiv}
+\contentsline {section}{LIST OF ABBREVIATIONS}{xvi}
 \contentsline {section}{\numberline {1}\MakeUppercase {Introduction}}{1}
-\contentsline {subsection}{\numberline {1.1}Quasar Absorption Line Spectroscopy}{1}
-\contentsline {subsection}{\numberline {1.2}Galaxy Formation and Evolution}{2}
-\contentsline {subsection}{\numberline {1.3}The Circumgalactic Medium}{3}
-\contentsline {subsection}{\numberline {1.4}The Baryon Cycle}{3}
-\contentsline {section}{\numberline {2}\MakeUppercase {Data}}{4}
-\contentsline {subsection}{\numberline {2.1}Spectral Properties}{4}
-\contentsline {subsection}{\numberline {2.2}Reduction and Pre-Analysis}{4}
-\contentsline {subsection}{\numberline {2.3}Redshift Path Length}{4}
-\contentsline {section}{\numberline {3}\MakeUppercase {Automated Line Detection}}{5}
-\contentsline {subsection}{\numberline {3.1}Motivating Automated Line Detection}{5}
-\contentsline {section}{\numberline {4}Automated Line Detection}{5}
-\contentsline {subsection}{\numberline {4.1}Defining the Search Window}{5}
-\contentsline {subsubsection}{\numberline {4.1.1}The Step-By-Step Recipe for Finding Redshifted Lines}{6}
-\contentsline {section}{\numberline {5}\MakeUppercase {Analysis of Absorption Properties}}{8}
-\contentsline {subsection}{\numberline {5.1}Equivalent Width Regions}{8}
-\contentsline {subsection}{\numberline {5.2}Calculating Redshifts and Velocities}{8}
-\contentsline {subsection}{\numberline {5.3}Equivalent Widths and Kinematic Spreads}{8}
-\contentsline {subsection}{\numberline {5.4}Column Densities}{8}
-\contentsline {section}{\numberline {6}\MakeUppercase {Properties and Evolution of {\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Absorbers}}{9}
-\contentsline {subsection}{\numberline {6.1}Number of Absorbers Per Path Length}{9}
-\contentsline {subsection}{\numberline {6.2}Parameterizing $dN\,/dX$ to Derive Physical Properties}{9}
-\contentsline {subsection}{\numberline {6.3}Equivalent Width Distribution}{9}
-\contentsline {subsection}{\numberline {6.4}Column Density Distribution}{9}
-\contentsline {subsection}{\numberline {6.5}$\Omega _{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}}$}{9}
-\contentsline {subsection}{\numberline {6.6}Strong vs. Weak Absorbers}{9}
-\contentsline {section}{\numberline {7}\MakeUppercase {Properties and Evolution of {\hbox {{\rm C}\kern 0.1em{\sc iv}}} Absorbers}}{10}
-\contentsline {subsection}{\numberline {7.1}Number of Absorbers Per Path Length}{10}
-\contentsline {subsection}{\numberline {7.2}Parameterizing $dN\,/dX$ to Derive Physical Properties}{10}
-\contentsline {subsection}{\numberline {7.3}Equivalent Width Distribution}{10}
-\contentsline {subsection}{\numberline {7.4}Column Density Distribution}{10}
-\contentsline {subsection}{\numberline {7.5}$\Omega _{\hbox {{\rm C}\kern 0.1em{\sc iv}}}$}{10}
-\contentsline {subsection}{\numberline {7.6}Strong vs. Weak Absorbers}{10}
-\contentsline {section}{\numberline {8}\MakeUppercase {Kinematics Properties using TPCF Analysis}}{11}
-\contentsline {subsection}{\numberline {8.1}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Kinematics}{11}
-\contentsline {subsubsection}{\numberline {8.1.1}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Redshift Evolution}{11}
-\contentsline {subsection}{\numberline {8.2}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Optical Depth Behavior}{11}
-\contentsline {subsection}{\numberline {8.3}{\hbox {{\rm C}\kern 0.1em{\sc iv}}} Kinematics}{11}
-\contentsline {subsubsection}{\numberline {8.3.1}{\hbox {{\rm C}\kern 0.1em{\sc iv}}} Redshift Evolution}{11}
-\contentsline {subsection}{\numberline {8.4}{\hbox {{\rm C}\kern 0.1em{\sc iv}}} Optical Depth Behavior}{11}
-\contentsline {section}{\numberline {9}\MakeUppercase {Conclusions}}{12}
-\contentsline {subsection}{\numberline {9.1}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}}}{12}
-\contentsline {subsubsection}{\numberline {9.1.1}Strong Absorbers}{12}
-\contentsline {subsubsection}{\numberline {9.1.2}Weak Absorbers}{12}
-\contentsline {subsubsection}{\numberline {9.1.3}Kinematics}{12}
-\contentsline {subsection}{\numberline {9.2}{\hbox {{\rm C}\kern 0.1em{\sc iv}}}}{12}
-\contentsline {subsubsection}{\numberline {9.2.1}Strong Absorbers}{12}
-\contentsline {subsubsection}{\numberline {9.2.2}Weak Absorbers}{13}
-\contentsline {subsubsection}{\numberline {9.2.3}Kinematics}{13}
-\contentsline {subsection}{\numberline {9.3}Evolution in the Context of Galaxy Evolution}{13}
-\contentsline {subsection}{\numberline {9.4}Consequences, and Verification}{13}
-\contentsline {subsection}{\numberline {9.5}Future Work}{13}
+\contentsline {subsection}{\numberline {1.1}Galaxy Formation and Evolution}{2}
+\contentsline {subsection}{\numberline {1.2}The Circumgalactic Medium}{2}
+\contentsline {subsection}{\numberline {1.3}The Baryon Cycle}{4}
+\contentsline {subsection}{\numberline {1.4}Quasar Absorption Line Spectroscopy}{4}
+\contentsline {subsection}{\numberline {1.5}A Brief History of {\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Absorption Surveys}{5}
+\contentsline {subsection}{\numberline {1.6}A Brief History of {\hbox {{\rm C}\kern 0.1em{\sc iv}}} Absorption Surveys}{9}
+\contentsline {subsection}{\numberline {1.7}Project Goals}{12}
+\contentsline {section}{\numberline {2}\MakeUppercase {Data}}{13}
+\contentsline {subsection}{\numberline {2.1}Spectral Properties}{13}
+\contentsline {subsection}{\numberline {2.2}Reduction and Pre-Analysis}{13}
+\contentsline {subsection}{\numberline {2.3}Redshift Path Length}{13}
+\contentsline {section}{\numberline {3}\MakeUppercase {Automated Line Detection}}{14}
+\contentsline {subsection}{\numberline {3.1}Motivating Automated Line Detection}{14}
+\contentsline {subsection}{\numberline {3.2}Defining the Search Window}{14}
+\contentsline {subsection}{\numberline {3.3}Matched Filtering Algorithm}{15}
+\contentsline {subsection}{\numberline {3.4}The Step-By-Step Recipe for Finding Redshifted Lines}{17}
+\contentsline {section}{\numberline {4}\MakeUppercase {Analysis of Absorption Properties}}{20}
+\contentsline {subsection}{\numberline {4.1}Equivalent Width Regions}{20}
+\contentsline {subsection}{\numberline {4.2}Calculating Redshifts and Velocities}{20}
+\contentsline {subsection}{\numberline {4.3}Equivalent Widths and Kinematic Spreads}{20}
+\contentsline {subsection}{\numberline {4.4}Column Densities}{20}
+\contentsline {section}{\numberline {5}\MakeUppercase {Properties and Evolution of {\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Absorbers}}{21}
+\contentsline {subsection}{\numberline {5.1}Number of Absorbers Per Path Length}{21}
+\contentsline {subsection}{\numberline {5.2}Equivalent Width Distribution}{26}
+\contentsline {subsection}{\numberline {5.3}Column Density Distribution}{29}
+\contentsline {subsection}{\numberline {5.4}$\Omega _{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}}$}{30}
+\contentsline {subsection}{\numberline {5.5}Assessing Possible Sightline Bias in the {\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Sample}{32}
+\contentsline {subsection}{\numberline {5.6}Strong vs. Weak Absorbers}{35}
+\contentsline {subsubsection}{\numberline {5.6.1}Total Equivalent Width Distribution}{38}
+\contentsline {subsubsection}{\numberline {5.6.2}Potential Causes for Trends}{39}
+\contentsline {subsubsection}{\numberline {5.6.3}Ionization Conditions}{41}
+\contentsline {subsubsection}{\numberline {5.6.4}Metallicity}{42}
+\contentsline {subsubsection}{\numberline {5.6.5}Quantity of Magnesium}{43}
+\contentsline {section}{\numberline {6}\MakeUppercase {Properties and Evolution of {\hbox {{\rm C}\kern 0.1em{\sc iv}}} Absorbers}}{51}
+\contentsline {subsection}{\numberline {6.1}Number of Absorbers Per Path Length}{51}
+\contentsline {subsection}{\numberline {6.2}Equivalent Width Distribution}{53}
+\contentsline {subsection}{\numberline {6.3}Column Density Distribution}{53}
+\contentsline {subsection}{\numberline {6.4}$\Omega _{\hbox {{\rm C}\kern 0.1em{\sc iv}}}$}{54}
+\contentsline {subsection}{\numberline {6.5}Strong vs. Weak Absorbers}{55}
+\contentsline {section}{\numberline {7}\MakeUppercase {Kinematics Properties using TPCF Analysis}}{64}
+\contentsline {subsection}{\numberline {7.1}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Kinematics}{64}
+\contentsline {subsubsection}{\numberline {7.1.1}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Redshift Evolution}{64}
+\contentsline {subsection}{\numberline {7.2}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}} Optical Depth Behavior}{64}
+\contentsline {subsection}{\numberline {7.3}{\hbox {{\rm C}\kern 0.1em{\sc iv}}} Kinematics}{64}
+\contentsline {subsubsection}{\numberline {7.3.1}{\hbox {{\rm C}\kern 0.1em{\sc iv}}} Redshift Evolution}{64}
+\contentsline {subsection}{\numberline {7.4}{\hbox {{\rm C}\kern 0.1em{\sc iv}}} Optical Depth Behavior}{64}
+\contentsline {section}{\numberline {8}\MakeUppercase {Conclusions}}{65}
+\contentsline {subsection}{\numberline {8.1}{\hbox {{\rm Mg}\kern 0.1em{\sc ii}}}}{65}
+\contentsline {subsubsection}{\numberline {8.1.1}Strong Absorbers}{65}
+\contentsline {subsubsection}{\numberline {8.1.2}Weak Absorbers}{65}
+\contentsline {subsubsection}{\numberline {8.1.3}Kinematics}{65}
+\contentsline {subsection}{\numberline {8.2}{\hbox {{\rm C}\kern 0.1em{\sc iv}}}}{65}
+\contentsline {subsubsection}{\numberline {8.2.1}Strong Absorbers}{65}
+\contentsline {subsubsection}{\numberline {8.2.2}Weak Absorbers}{66}
+\contentsline {subsubsection}{\numberline {8.2.3}Kinematics}{66}
+\contentsline {subsection}{\numberline {8.3}Evolution in the Context of Galaxy Evolution}{66}
+\contentsline {subsection}{\numberline {8.4}Consequences, and Verification}{66}
+\contentsline {subsection}{\numberline {8.5}Future Work}{66}
 \contentsline {}{}{}
 \penalty \@secpenalty \relax \vskip 1.0em plus\p@ \relax \@tempdima 1.5em\relax \begingroup \parindent \z@ \rightskip 1.55em\parfillskip -1.55em\unhbox \voidb@x \bfseries \advance \leftskip \@tempdima \hskip -\leftskip \hbox to\@tempdima {Appendices\hfil }\penalty \@M \hfil \penalty \@M \hbox to1.55em{\hss }\par \endgroup 
 \global \c@tocdepth 1\relax 
-\contentsline {section}{\numberline {A}\MakeUppercase {There Be Math in Them There Hills}}{15}
-\contentsline {subsection}{\numberline {A.1}Appendix subsection}{15}
-\contentsline {section}{REFERENCES}{16}
+\contentsline {section}{\numberline {A}\MakeUppercase {There Be Math in Them There Hills}}{68}
+\contentsline {subsection}{\numberline {A.1}Appendix subsection}{68}
+\contentsline {section}{REFERENCES}{69}

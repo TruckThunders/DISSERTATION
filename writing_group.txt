@@ -25,3 +25,14 @@
 - Added ODR fitting methodology to MgII paper
 - Moved relevant historical notations to discussion section of CIV paper
 - Updated all references
+
+4/27/2017
+
+- Wrote draft of intro including some aspects of the MgII paper's intro
+- Wrote most of line detection section
+
+5/11/2017
+
+- Copy/Pasta'd the results of the CIV paper into chp6. DID NOT INCLUDE DISCUSSION.
+- Copy/Pasta'd the results AND discussion of the MgII paper into chp5.
+- Copy/Pasta'd the MgII conclusions, but did not assign them the proper subsections
